@@ -30,4 +30,33 @@ class Stack<T> implements IStack<T> {
   size(): number {
     return this.storage.length;
   }
+
+  printElements(): void {
+    this.storage.forEach((element) => {
+      console.log(element);
+    })
+  }
 }
+
+const stack = new Stack<number>();
+
+console.log("Adding elements.....")
+stack.push(2);
+stack.push(3);
+stack.push(5);
+stack.printElements(); //2 3 5
+
+console.log("Popping.....")
+stack.pop(); //5
+stack.printElements(); //2 3
+
+console.log("Adding elements.....")
+stack.push(7);
+stack.push(10);
+stack.push(15)
+stack.printElements(); //2 3 7 10 15
+
+console.log("Popping.....")
+stack.pop();//15
+stack.pop();//10
+stack.printElements();//2 3 7
