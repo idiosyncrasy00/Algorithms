@@ -1,15 +1,11 @@
-class TreeNode {
-  public key = null;
-  public left: any;
-  public right: any;
-  constructor(value: any) {
-    this.key = value;
+export class TreeNode {
+  public data: any;
+  public left: TreeNode | null;
+  public right: TreeNode | null;
+  constructor(data: any) {
+    this.data = data;
     this.left = null;
     this.right = null;
   }
 }
-
-let root = new TreeNode(3);
-root.left = new TreeNode(4);
-root.left.left = new TreeNode(5);
 
